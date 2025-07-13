@@ -1,9 +1,16 @@
+import Header from './components/Header.jsx'
+import Sidebar from './components/Sidebar.jsx'
+import MainContent from "./components/MainContent.jsx";
+
 const App = () => {
     return (
-        <div className="demo-box">
-            <h1>SCSS Demo</h1>
-            <p>Modern CSS and Sass features go here!</p>
-        </div>
+        <>
+            <Header />
+            <div className="layout">
+                <Sidebar />
+                <MainContent />
+            </div>
+        </>
     )
 }
 

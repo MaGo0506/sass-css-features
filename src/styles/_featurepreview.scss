@@ -1,0 +1,37 @@
+@use "main" as *;
+
+.feature-preview {
+  margin-bottom: 4rem;
+
+  .feature-title {
+    margin-bottom: 1rem;
+
+    h2 {
+      color: $color-theme;
+      font-size: 1.5rem;
+    }
+  }
+
+  .preview-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    @include mobile-query {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .preview-code,
+  .preview-result {
+    background: $color-gray-light;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .preview-result {
+    background: $color-white;
+    color: $color-black-soft;
+    border: 1px dashed $color-gray-medium;
+  }
+}

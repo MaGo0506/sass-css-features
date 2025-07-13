@@ -1,0 +1,18 @@
+@use "main" as *;
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: $color-white;
+  border-bottom: 1px solid $color-gray-light;
+  padding: 1rem 2rem;
+  color: $color-theme;
+  font-weight: bold;
+  font-size: 1.5rem;
+
+  @include mobile-query {
+    font-size: 1.2rem;
+    padding: 0.75rem 1rem;
+  }
+}

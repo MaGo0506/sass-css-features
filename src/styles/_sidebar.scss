@@ -1,0 +1,64 @@
+@use "main" as *;
+
+.sidebar {
+  width: 240px;
+  padding: 1.5rem;
+  border-right: 1px solid $color-gray-light;
+  background: $color-white;
+  height: calc(100vh - 4rem);
+  overflow-y: auto;
+
+  .sidebar-group {
+    margin-bottom: 2rem;
+  }
+
+  .sidebar-category {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $color-black-soft;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    text-align: left;
+    width: 100%;
+    transition: color 0.2s ease;
+
+    &.expanded {
+      color: $color-theme;
+    }
+
+    &:hover {
+      color: $color-theme;
+    }
+  }
+
+  .sidebar-subitems {
+    list-style: none;
+    margin: 0.5rem 0 0;
+    padding-left: 1rem;
+
+    li {
+      margin-bottom: 0.5rem;
+
+      a {
+        text-decoration: none;
+        color: $color-black-soft;
+        font-size: 0.95rem;
+
+        &.active {
+          color: $color-theme;
+          font-weight: 600;
+        }
+
+        &:hover {
+          color: $color-theme;
+        }
+      }
+    }
+  }
+
+  @include mobile-query {
+    display: none;
+  }
+}

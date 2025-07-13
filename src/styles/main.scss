@@ -1,0 +1,66 @@
+// Variables
+$color-white: #ffffff;
+$color-black-soft: #1a1a1a;
+$color-gray-light: #e5e5e5;
+$color-gray-medium: #b0b0b0;
+$color-theme: #38bdf8;
+
+* {
+  font-family: "Source Code Pro", system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin mobile-query {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+body {
+  background: $color-white;
+  color: $color-black-soft;
+  padding: 2rem;
+
+  h1 {
+    color: $color-theme;
+  }
+
+  p {
+    color: $color-gray-medium;
+  }
+}
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  min-height: calc(100vh - 4rem); // adjust if header is sticky
+}
+
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+  min-width: 0;
+}
+
+.card {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+
+  img {
+    max-width: 300px;
+    max-height: 200px;
+  }
+
+  &:has(img) {
+    border: 2px solid $color-theme;
+  }
+}

@@ -1,0 +1,14 @@
+@use "main" as *;
+
+.code-block {
+  background: #0f172a;
+  color: #e0f2fe;
+  padding: 1rem;
+  border-radius: 8px;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.875rem;
+  overflow-x: auto;
+  width: 100%;
+  height: 100%;
+  white-space: pre-wrap;
+}
